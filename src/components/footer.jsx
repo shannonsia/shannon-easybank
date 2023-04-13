@@ -1,23 +1,6 @@
 import React, { useState } from "react";
 import RequestInviteButton from "./invite-button";
 
-{
-  /* function SocialMediaIcon() {
-  const socialMedia = ["Facebook"];
-
-  return (
-    <>
-      <div>
-        {socialMedia.map((icon) => (
-          <div key={icon}>{icon}</div>
-        ))}
-      </div>
-    </>
-  );
-}
-*/
-}
-
 function Footer() {
   const footerItems = [
     "About Us",
@@ -29,17 +12,17 @@ function Footer() {
   ];
 
   const socialMediaIcons = [
-    "../images/icon-facebook.svg",
-    "../images/icon-youtube.svg",
-    "../images/icon-twitter.svg",
-    "../images/icon-pinterest.svg",
-    "../images/icon-instagram.svg",
+    "icon-facebook.svg",
+    "icon-youtube.svg",
+    "icon-twitter.svg",
+    "icon-pinterest.svg",
+    "icon-instagram.svg",
   ];
 
   return (
     <div className="footer-bar">
       <div className="footer-left">
-        <img src={"../images/logo.svg"}></img>
+        <img src={"logo.svg"}></img>
         <div>
           {socialMediaIcons.map((icon) => (
             <img src={icon} key={icon} className="footer-socials"></img>
