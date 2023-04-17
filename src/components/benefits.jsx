@@ -13,13 +13,10 @@ function IndividualBenefits({ image, heading, text }) {
 function Benefits() {
   return (
     <div className="benefits-section">
-      <h2>Why choose Easybank?</h2>
-      <div style={{ color: "hsl(233, 8%, 62%)" }}>
+      <div className="headings">Why choose Easybank?</div>
+      <div className="benefits-intro">
         We leverage Open Banking to turn your bank account into your financial
-        hub.
-      </div>
-      <div style={{ color: "hsl(233, 8%, 62%)" }}>
-        Control your finances like never before.
+        hub. Control your finances like never before.
       </div>
       <div className="benefits-container">
         <IndividualBenefits

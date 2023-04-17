@@ -2,14 +2,7 @@ import React, { useState } from "react";
 import RequestInviteButton from "./invite-button";
 
 function Footer() {
-  const footerItems = [
-    "About Us",
-    "Contact",
-    "Blog",
-    "Careers",
-    "Support",
-    "Privacy Policy",
-  ];
+  const footerItems = ["About Us"];
 
   const socialMediaIcons = [
     "icon-facebook.svg",

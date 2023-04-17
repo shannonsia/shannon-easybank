@@ -16,10 +16,10 @@ function IndividualArticles({ image, author, title, text }) {
 function LatestArticles() {
   return (
     <div className="article-section">
-      <h1>Latest Articles</h1>
+      <div className="headings">Latest Articles</div>
       <div className="article-container">
         <IndividualArticles
-          image="image-currency.jpg"
+          image="/image-currency.jpg"
           author="Claire Robinson"
           title="Receive money in any currency with no fees"
           text="The world is getting smaller and we're becoming more mobile. So why should you be forced to only receive money in a single..."
