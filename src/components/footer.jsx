@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import RequestInviteButton from "./invite-button";
 
 function Footer() {
-  const footerItems = ["About Us"];
+  const footerItemsOne = ["About Us", "Contact", "Blog"];
+
+  const footerItemsTwo = ["Careers", "Support", "Privacy Policy"];
 
   const socialMediaIcons = [
     "icon-facebook.svg",
@@ -23,11 +25,20 @@ function Footer() {
         </div>
       </div>
       <div className="footer-middle">
-        {footerItems.map((item) => (
-          <div key={item} className="footer-items">
-            {item}
-          </div>
-        ))}
+        <div>
+          {footerItemsOne.map((item) => (
+            <div key={item} className="footer-items">
+              {item}
+            </div>
+          ))}
+        </div>
+        <div>
+          {footerItemsTwo.map((item) => (
+            <div key={item} className="footer-items">
+              {item}
+            </div>
+          ))}
+        </div>
       </div>
       <div className="footer-right">
         <RequestInviteButton></RequestInviteButton>
