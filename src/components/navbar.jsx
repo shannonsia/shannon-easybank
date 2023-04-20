@@ -3,7 +3,7 @@ import RequestInviteButton from "./invite-button.jsx";
 
 function Navbar() {
   const navItems = ["Home", "About", "Contact", "Blog", "Careers"];
-  const [isNavExpanded, setIsNavExpanded] = useState(true);
+  const [isNavExpanded, setIsNavExpanded] = useState(false);
 
   return (
     <div className="nav-container">
@@ -38,8 +38,9 @@ function Navbar() {
         }}
         style={{ display: isNavExpanded ? "none" : "block" }}
       >
-        <img src="/nav.jpg" />
+        <img src="/nav.jpg" id="mobile-icon" />
       </div>
+
       <div
         className="nav-close-mobile"
         onClick={() => {
@@ -47,7 +48,7 @@ function Navbar() {
         }}
         style={{ display: isNavExpanded ? "block" : "none" }}
       >
-        <img src="/icon-close.svg" />
+        <img src="/icon-close.svg" id="close-icon" />
       </div>
     </div>
   );
