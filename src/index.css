@@ -1,11 +1,9 @@
 #root{
     font-family: 'Public Sans', sans-serif;
+    box-sizing: border-box;
 }
 
-@media(max-width: 375px){
-    .nav-container{
-        padding: 5px 60px;
-    }
+@media(max-width: 768px){
 
     .nav-bar{
         display: none;
@@ -26,10 +24,12 @@
         border: solid  hsl(233, 26%, 24%) 0.5px;
         border-radius: 5px;
         background-color: white;
-        width: 100%;
         position: absolute;
-        margin-top: 40px;
-        margin-left: -70px;
+        width: 90%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        z-index: 1
     }
 
     .nav-mobile{
@@ -40,44 +40,44 @@
         color: hsl(233, 26%, 24%);
     }
 
-    .nav-button-mobile{
+    .nav-burger-mobile{
         cursor: pointer;
         display: block;
-        position: absolute;
-        top: 30px;
-        right: -240px;
     }
-    .nav-button-mobile:hover{
+    .nav-burger-mobile:hover{
         cursor: pointer
     }
 
-    .nav-close-mobile{
-        position: absolute;
-        top: 30px;
-        right: -240px
-    }
     .nav-close-mobile:hover{
         cursor: pointer;
     }
 
+.introduction-container{
+    flex-direction: column-reverse;
+}
 
     .introduction{
         display: flex;
         flex-direction: column;
         text-align: center;
-        padding: 100px 160px;
         width: 100%;
-        background-image: url(../images/image-mockups.png), url(../images/bg-intro-desktop.svg);
-        background-position: top;
-        background-repeat: no-repeat;
-        background-size: 90%;
 
     }
 
     .introduction-heading{
-        background-color: white;
-        margin-top: 500px;
         padding-top: 50px;
+    }
+
+    .image-one{
+        width: 95%;
+    }
+
+.image-two{
+    position: absolute;
+        width: 95%;
+        max-height: 800px;
+        min-height: 500px;
+        object-position: 0px -250px
     }
 
     .headings{
@@ -120,7 +120,7 @@
 
 }
 
-@media(min-width: 376px){
+@media(min-width: 769px){
     #close-icon{
         display: none;
     }
@@ -130,14 +130,7 @@
     }
 
     .nav-mobile{
-            display: none;
-    }
-
-    .nav-container{
-        padding-left: 160px;
-        padding-right: 160px;
-        display: flex;
-        justify-content: space-between;
+        display: none;
     }
 
     .nav-bar{
@@ -147,12 +140,26 @@
         font-weight: 300;
     }
 
-    .introduction-heading{
-        width: 25%;
+    .introduction{
+        max-width: 50%;
+        padding-top: 50px;
+        padding-bottom: 50px
     }
 
-    .introduction-text{
-        width: 40%;
+    .image-one{
+        z-index: 0;
+        position: absolute;
+        width: 50%;
+        height: 500px;
+        object-position: 50px -50px
+    }
+
+.image-two{
+        z-index: 1;
+        position: absolute;
+        width: 50%;
+        height: 550px;
+        object-position: 100px -50px;
     }
 
     .article{
@@ -167,24 +174,14 @@
     .footer-right{
         align-items: flex-end;
     }
-
-    .introduction{
-        background-image: url(../images/image-mockups.png), url(../images/bg-intro-desktop.svg);
-        background-position: top right;
-        background-repeat: no-repeat;
-        background-size: 50%;
-        height: 300px;
-        padding: 100px 160px;
-        width: 100%
-    }
     
 }
 
-
 .nav-container{
     margin-top: 30px;
-    margin-bottom: 30px;
-    width: 100%;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .nav-items{
@@ -233,6 +230,17 @@
     margin-bottom: 30px;
 }
 
+
+.introduction-container{
+        display: flex;
+        padding: 20px;
+    }
+
+
+.introduction-image{
+    }
+
+
 .headings{
     font-size: 30px;
     font-weight: 300px;
@@ -242,8 +250,7 @@
 
 .benefits-section{
     background-color: hsl(220, 16%, 96%);
-    padding: 70px 160px;
-    width: 100%
+    padding: 70px 15px;
 }
 
 .benefits-title{
@@ -277,8 +284,7 @@
 
 .article-section{
     background-color: hsl(0, 0%, 98%);
-    padding: 70px 160px;
-    width: 100%;
+    padding: 70px 15px;
 }
 
 .article-container{
@@ -319,21 +325,26 @@
 
 .footer-bar{
     background-color: hsl(233, 26%, 24%);
-    padding: 40px 160px;
+    padding: 40px 15px;
     display: flex;
     justify-content: space-between;
-    width: 100%;
 }
 
 .footer-socials{
-    margin: 8px;
     padding-top: 50px;
-    cursor: pointer;
+
 }
 
-.svg:hover {
-    fill: red;
+.socials{
+    margin: 5px;
+    cursor: pointer;
+    fill: #FFF;
 }
+
+.socials:hover {
+    fill: hsl(192, 70%, 51%)
+}
+
 
 .footer-items{
     color: hsl(0, 0%, 98%);
@@ -355,6 +366,5 @@
 .footer-right{
     display: flex;
    flex-direction: column;
-
    gap: 40px;
 }
