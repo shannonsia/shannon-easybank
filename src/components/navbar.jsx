@@ -52,6 +52,11 @@ function Navbar() {
           </div>
         ))}
       </div>
+
+      <div
+        className="black-screen"
+        style={{ display: isNavExpanded ? "block" : "none" }}
+      ></div>
     </div>
   );
 }
